@@ -11,7 +11,6 @@ function App() {
     const newItem = {
       id: updatedGroceryItems.length,
       name: inputValue,
-      quantity: 1,
       completed: false,
     };
     updatedGroceryItems.push(newItem);
