@@ -7,19 +7,19 @@ function App() {
   const [groceryItems, setGroceryItems] = useState([]);
 
   const addItem = (inputValue) => {
-    const updatedGroceryItems = [...groceryItems];
     const newItem = {
-      id: updatedGroceryItems.length,
+      id: groceryItems.length,
       name: inputValue,
       completed: false,
     };
+    const updatedGroceryItems = [...groceryItems];
     updatedGroceryItems.push(newItem);
     setGroceryItems(updatedGroceryItems);
   };
 
-  const updateItemChecking = (id, value) => {
+  const updateItemChecking = (id, status) => {
     const updatedItems = groceryItems.map((item) =>
-      item.id === id ? { ...item, completed: value } : item
+      item.id === id ? { ...item, completed: status } : item
     );
     setGroceryItems(updatedItems);
   };
