@@ -7,9 +7,7 @@ function Item({ item, removeItem, updateItemChecking }) {
           value={item.completed}
           onChange={(e) => updateItemChecking(item.id, e.target.checked)}
         />
-        <p>
-          {item.name} {item.quantity > 1 && <span>x{item.quantity}</span>}
-        </p>
+        <p>{item.name}</p>
       </div>
       <div>
         <button className="remove-button" onClick={() => removeItem(item.id)}>
